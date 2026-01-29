@@ -1,0 +1,109 @@
+/**
+ * Styles du minuteur circulaire - Application Orthophonie
+ */
+
+/* Transition pour le mode sobre */
+body {
+    transition: background 0.3s ease;
+}
+
+body.sober-mode {
+    background: #000000;
+}
+
+body.sober-mode .container {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container de progression */
+.progress-container {
+    display: none;
+    text-align: center;
+}
+
+/* Container du cercle */
+.circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+/* Cercle extérieur */
+.outer-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #f0f0f0;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-circle.hidden {
+    background: transparent;
+    box-shadow: none;
+}
+
+body.sober-mode .outer-circle {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Cercle intérieur */
+.inner-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.1s linear, height 0.1s linear;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+}
+
+body.sober-mode .inner-circle {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Bouton reset en mode sobre */
+.reset-btn {
+    margin-top: 30px;
+}
+
+body.sober-mode .reset-btn {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.sober-mode .reset-btn:hover {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Animation de fin */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
