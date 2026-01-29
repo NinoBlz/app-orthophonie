@@ -1,0 +1,41 @@
+/**
+ * Styles du minuteur à barre de progression - Application Orthophonie
+ */
+
+/* Container de progression */
+.progress-container {
+    display: none;
+    text-align: center;
+}
+
+/* Barre de progression */
+.progress-bar {
+    width: 100%;
+    height: 40px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    transition: width 0.1s linear;
+}
+
+/* Status */
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+    display: none;
+}
+
+.complete {
+    color: #4caf50;
+    font-weight: 600;
+}
